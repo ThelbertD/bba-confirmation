@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You're in! — The Hormone Fix | Better Body Academy</title>
+<meta name="description" content="Your seat is locked in for the BBA Hormone Fix training. Here's what to do next.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="img/bba-badge.png">
+<link rel="apple-touch-icon" href="img/bba-badge.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000000;
+    --bg-deep:#050505;
+    --ink:#FFFFFF;
+    --muted:rgba(255,255,255,0.68);
+    --subtle:rgba(255,255,255,0.5);
+    --pink:#F58FA8;
+    --pink-glow:#FFB6CE;
+    --line:rgba(255,255,255,0.1);
+    --line-strong:rgba(255,255,255,0.2);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  body::before{
+    content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(245,143,168,0.34), transparent 55%),
+      radial-gradient(ellipse 40% 50% at 100% 60%, rgba(255,182,206,0.18), transparent 60%),
+      radial-gradient(ellipse 40% 35% at 0% 70%, rgba(245,143,168,0.1), transparent 60%);
+  }
+
+  nav.top{
+    position:relative;z-index:2;max-width:1280px;margin:0 auto;
+    padding:22px 32px;display:flex;align-items:center;justify-content:space-between;
+  }
+  .logo{display:flex;align-items:center}
+  .logo img{height:32px;width:auto;display:block;filter:drop-shadow(0 4px 14px rgba(245,143,168,0.3))}
+  nav.top .badge{
+    font-size:11px;color:var(--pink);font-weight:700;letter-spacing:0.18em;text-transform:uppercase;
+    padding:6px 12px;border-radius:999px;border:1px solid rgba(245,143,168,0.3);background:rgba(245,143,168,0.08);
+  }
+
+  main{position:relative;z-index:1}
+
+  .hero{
+    max-width:980px;margin:0 auto;padding:40px 32px 40px;text-align:center;
+  }
+  .hero-badge{
+    width:120px;height:120px;margin:0 auto 28px;border-radius:50%;
+    background:#000;border:3px solid #fff;display:flex;align-items:center;justify-content:center;
+    overflow:hidden;
+    box-shadow:0 0 60px rgba(245,143,168,0.55);
+    animation:popIn 0.6s cubic-bezier(.2,.7,.2,1);
+  }
+  .hero-badge img{width:100%;height:100%;object-fit:contain}
+  @keyframes popIn{from{opacity:0;transform:scale(0.6)}to{opacity:1;transform:scale(1)}}
+
+  h1{
+    font-weight:800;font-size:clamp(36px, 5.4vw, 64px);line-height:1.04;letter-spacing:-0.03em;margin:0 0 18px;
+  }
+  h1 .serif{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--pink)}
+  .hero-sub{
+    font-size:18px;color:var(--muted);max-width:620px;margin:0 auto 16px;line-height:1.55;
+  }
+  .hero-sub strong{color:#fff;font-weight:600}
+  .hero-name{color:var(--pink);font-weight:700}
+
+  /* Countdown */
+  .countdown-wrap{
+    max-width:920px;margin:32px auto 0;padding:0 32px;
+  }
+  .countdown{
+    background:linear-gradient(135deg, rgba(245,143,168,0.12), rgba(255,182,206,0.06));
+    border:1px solid rgba(245,143,168,0.3);border-radius:24px;padding:32px 36px;
+    display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;
+    position:relative;overflow:hidden;
+  }
+  .countdown::before{
+    content:'';position:absolute;inset:0;
+    background:radial-gradient(ellipse at 90% 50%, rgba(245,143,168,0.12), transparent 60%);
+    pointer-events:none;
+  }
+  .countdown-label{position:relative;z-index:1;display:flex;flex-direction:column;gap:6px;min-width:0;text-align:left}
+  .countdown-eyebrow{
+    font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--pink);
+  }
+  .countdown-title{font-weight:800;font-size:22px;letter-spacing:-0.02em;line-height:1.2;color:#fff}
+  .countdown-sub{font-size:14px;color:var(--muted)}
+  .countdown-timer{position:relative;z-index:1;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:32px}
+  .countdown-cell{
+    min-width:78px;background:rgba(255,255,255,0.05);border:1px solid var(--line-strong);
+    border-radius:14px;padding:14px 8px;text-align:center;
+  }
+  .countdown-num{
+    font-weight:800;font-size:32px;letter-spacing:-0.02em;line-height:1;
+    font-variant-numeric:tabular-nums;
+    background:linear-gradient(135deg, var(--pink), var(--pink-glow));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .countdown-unit{font-size:10.5px;color:var(--subtle);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-top:6px}
+  .countdown-tba{
+    position:relative;z-index:1;display:flex;align-items:center;gap:14px;
+    padding:18px 24px;border-radius:14px;background:rgba(255,255,255,0.05);
+    border:1px dashed var(--line-strong);font-weight:600;color:var(--muted);font-size:15px;
+  }
+  .countdown-tba svg{width:22px;height:22px;color:var(--pink);flex-shrink:0}
+  @media (max-width:780px){
+    .countdown{padding:24px;flex-direction:column;align-items:flex-start;text-align:left}
+    .countdown-cell{min-width:66px;padding:12px 6px}
+    .countdown-num{font-size:26px}
+  }
+
+  /* Video block */
+  .video-section{padding:64px 32px;position:relative}
+  .video-inner{max-width:980px;margin:0 auto}
+  .video-eyebrow{
+    text-align:center;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+    color:var(--pink);margin-bottom:14px;
+  }
+  .video-title{
+    text-align:center;font-weight:800;font-size:clamp(24px, 3vw, 34px);
+    letter-spacing:-0.02em;margin:0 0 28px;line-height:1.2;
+  }
+  .video-title .serif{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--pink)}
+  .video-wrap{
+    position:relative;width:100%;aspect-ratio:16/9;background:#0A0A0A;
+    border:1px solid var(--line);border-radius:20px;overflow:hidden;
+    box-shadow:0 30px 80px -20px rgba(245,143,168,0.3);
+  }
+  .video-placeholder{
+    position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    background:linear-gradient(135deg, rgba(245,143,168,0.1), rgba(255,182,206,0.04));
+  }
+  .video-placeholder .play-btn{
+    width:84px;height:84px;border-radius:50%;
+    background:linear-gradient(135deg, var(--pink), var(--pink-glow));
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 20px 60px -10px rgba(245,143,168,0.6);
+    margin-bottom:18px;
+  }
+  .video-placeholder .play-btn svg{width:32px;height:32px;color:#000;margin-left:4px}
+  .video-placeholder .play-label{font-size:14px;color:var(--muted);font-weight:500;letter-spacing:0.04em}
+
+  /* Next steps */
+  .steps-section{padding:64px 32px}
+  .steps-inner{max-width:980px;margin:0 auto}
+  .steps-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+    color:var(--pink);margin-bottom:14px;
+  }
+  .steps-eyebrow::before{content:'';width:24px;height:1px;background:var(--pink)}
+  .steps-title{
+    font-weight:800;font-size:clamp(26px, 3.4vw, 38px);
+    letter-spacing:-0.025em;margin:0 0 36px;line-height:1.15;
+  }
+  .steps-title .serif{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--pink)}
+  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .step-card{
+    background:rgba(255,255,255,0.04);border:1px solid var(--line);border-radius:20px;
+    padding:28px 26px;position:relative;
+  }
+  .step-num{
+    display:inline-flex;width:44px;height:44px;border-radius:12px;
+    background:linear-gradient(135deg, rgba(245,143,168,0.2), rgba(255,182,206,0.2));
+    border:1px solid rgba(245,143,168,0.35);
+    align-items:center;justify-content:center;
+    font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;color:var(--pink);
+    margin-bottom:18px;
+  }
+  .step-card h3{font-size:18px;font-weight:700;letter-spacing:-0.01em;margin:0 0 8px;line-height:1.3}
+  .step-card p{font-size:14px;color:var(--muted);margin:0 0 14px;line-height:1.55}
+  .step-card a{
+    display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;
+    color:var(--pink);text-decoration:none;letter-spacing:0.01em;
+  }
+  .step-card a:hover{color:var(--pink-glow)}
+  .step-card a svg{width:14px;height:14px;transition:transform 0.2s}
+  .step-card a:hover svg{transform:translateX(3px)}
+  @media (max-width:900px){.steps-grid{grid-template-columns:1fr}}
+
+  .email-providers{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0 0 14px;
+  }
+  .email-providers a.provider{
+    display:flex;align-items:center;gap:8px;padding:10px 12px;
+    border-radius:10px;background:rgba(255,255,255,0.05);
+    border:1px solid var(--line-strong);
+    color:#fff;text-decoration:none;font-weight:600;font-size:12.5px;
+    transition:all 0.2s;
+  }
+  .email-providers a.provider:hover{
+    border-color:var(--pink);background:rgba(245,143,168,0.08);
+    transform:translateY(-1px);color:#fff;
+  }
+  .email-providers a.provider svg{
+    width:18px;height:18px;flex-shrink:0;
+    transition:none;transform:none !important;
+  }
+  .email-providers a.provider:hover svg{transform:none !important}
+
+  .calendar-visual{
+    display:flex;align-items:stretch;gap:12px;margin:0 0 14px;
+    padding:10px;border-radius:12px;
+    background:rgba(255,255,255,0.05);border:1px solid var(--line-strong);
+  }
+  .cal-icon{
+    flex-shrink:0;width:56px;display:flex;flex-direction:column;
+    border-radius:10px;overflow:hidden;border:1px solid var(--line-strong);
+    background:#fff;
+  }
+  .cal-icon .cal-month{
+    background:var(--pink);color:#000;font-size:10px;font-weight:800;
+    text-align:center;letter-spacing:1.5px;padding:3px 0;text-transform:uppercase;
+  }
+  .cal-icon .cal-day{
+    flex:1;display:flex;align-items:center;justify-content:center;
+    color:#000;font-size:22px;font-weight:800;letter-spacing:-0.02em;
+    background:#fff;padding:4px 0;
+  }
+  .cal-text{
+    display:flex;flex-direction:column;justify-content:center;min-width:0;
+  }
+  .cal-text-title{
+    font-size:13px;font-weight:700;color:#fff;letter-spacing:-0.01em;line-height:1.2;
+  }
+  .cal-text-sub{
+    font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.3;
+  }
+
+  .calendar-providers{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0 0 14px;
+  }
+  .calendar-providers a.provider{
+    display:flex;align-items:center;gap:8px;padding:10px 12px;
+    border-radius:10px;background:rgba(255,255,255,0.05);
+    border:1px solid var(--line-strong);
+    color:#fff;text-decoration:none;font-weight:600;font-size:12.5px;
+    transition:all 0.2s;
+  }
+  .calendar-providers a.provider:hover{
+    border-color:var(--pink);background:rgba(245,143,168,0.08);
+    transform:translateY(-1px);color:#fff;
+  }
+  .calendar-providers a.provider svg{width:18px;height:18px;flex-shrink:0;transition:none}
+
+  .social-providers{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0 0 14px;
+  }
+  .social-providers a.provider{
+    display:flex;align-items:center;gap:8px;padding:10px 12px;
+    border-radius:10px;background:rgba(255,255,255,0.05);
+    border:1px solid var(--line-strong);
+    color:#fff;text-decoration:none;font-weight:600;font-size:12.5px;
+    transition:all 0.2s;
+  }
+  .social-providers a.provider:hover{
+    border-color:var(--pink);background:rgba(245,143,168,0.08);
+    transform:translateY(-1px);color:#fff;
+  }
+  .social-providers a.provider svg{width:18px;height:18px;flex-shrink:0;transition:none}
+
+  .keyword-tag{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:6px 14px;border-radius:999px;margin:4px 0 12px;
+    background:linear-gradient(135deg, var(--pink), var(--pink-glow));
+    color:#000;font-weight:800;font-size:13px;letter-spacing:0.05em;
+    box-shadow:0 6px 20px -6px rgba(245,143,168,0.55);
+  }
+  .keyword-tag .keyword-icon{
+    width:14px;height:14px;
+  }
+
+  /* While you wait */
+  .while-section{padding:60px 32px 80px}
+  .while-inner{
+    max-width:980px;margin:0 auto;background:rgba(255,255,255,0.04);
+    border:1px solid var(--line);border-radius:24px;padding:48px;text-align:center;
+  }
+  .while-inner h2{
+    font-weight:800;font-size:clamp(22px, 2.6vw, 30px);letter-spacing:-0.02em;margin:0 0 12px;line-height:1.2;
+  }
+  .while-inner h2 .serif{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--pink)}
+  .while-inner p{color:var(--muted);font-size:15.5px;max-width:560px;margin:0 auto 22px;line-height:1.55}
+  .while-buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+  .btn-ghost{
+    display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:12px;
+    background:rgba(255,255,255,0.05);border:1px solid var(--line-strong);
+    color:#fff;text-decoration:none;font-weight:600;font-size:14px;
+    transition:all 0.2s;
+  }
+  .btn-ghost:hover{border-color:var(--pink);background:rgba(245,143,168,0.08);color:var(--pink)}
+
+  footer{padding:48px 32px 64px;text-align:center;border-top:1px solid var(--line);background:var(--bg-deep)}
+  .footer-inner{max-width:880px;margin:0 auto}
+  .copyright{font-size:11.5px;color:var(--subtle);letter-spacing:0.02em}
+  footer p{margin:8px 0;font-size:12px;color:var(--muted)}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--pink)}
+
+  @media (max-width:600px){
+    .hero{padding:24px 20px 30px}
+    .hero h1{font-size:36px}
+    .hero-badge{width:96px;height:96px}
+    .video-section, .steps-section, .while-section{padding:48px 20px}
+    .while-inner{padding:32px 24px}
+    nav.top{padding:16px 20px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="logo">
+    <img src="img/bba-logo-horizontal.png" alt="Better Body Academy">
+  </div>
+  <span class="badge">Registered</span>
+</nav>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-badge">
+      <img src="img/bba-badge.png" alt="BBA Transformation Team">
+    </div>
+    <h1>You're in, <span class="hero-name" id="firstNameSlot">friend</span>. <span class="serif">Save this page.</span></h1>
+    <p class="hero-sub">Your seat for <strong>The Hormone Fix</strong> is locked in. A confirmation email is on its way with your room link. Here's everything you need to know before the call.</p>
+  </section>
+
+  <section class="video-section">
+    <div class="video-inner">
+      <div class="video-eyebrow">A short welcome</div>
+      <h2 class="video-title">A 90-second note from <span class="serif">Carly.</span></h2>
+
+      <div class="video-wrap">
+        <div class="video-placeholder" id="videoPlaceholder">
+          <div class="play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7L8 5z"/></svg>
+          </div>
+          <div class="play-label">Welcome video coming soon</div>
+        </div>
+        <!-- Replace placeholder with embed when ready, e.g.:
+        <iframe src="https://www.loom.com/embed/YOUR_ID" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+        -->
+      </div>
+
+      <div class="countdown-timer" id="countdownTimer">
+        <div class="countdown-cell"><div class="countdown-num" id="cdDays">00</div><div class="countdown-unit">Days</div></div>
+        <div class="countdown-cell"><div class="countdown-num" id="cdHours">00</div><div class="countdown-unit">Hours</div></div>
+        <div class="countdown-cell"><div class="countdown-num" id="cdMins">00</div><div class="countdown-unit">Minutes</div></div>
+        <div class="countdown-cell"><div class="countdown-num" id="cdSecs">00</div><div class="countdown-unit">Seconds</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps-section">
+    <div class="steps-inner">
+      <div class="steps-eyebrow">Three quick things</div>
+      <h2 class="steps-title">Do these before the call <span class="serif">starts.</span></h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Check your inbox</h3>
+          <p>The confirmation email has your room link. If you don't see it in 5 minutes, check spam or promotions.</p>
+          <div class="email-providers">
+            <a class="provider" href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener" aria-label="Open Gmail">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path fill="#4285F4" d="M22 5.457v13.043a1.5 1.5 0 0 1-1.5 1.5H18V8.821l-6 4.5-6-4.5V20H3.5A1.5 1.5 0 0 1 2 18.5V5.457A1.5 1.5 0 0 1 3.5 3.957h.572L12 9.643l7.928-5.686h.572a1.5 1.5 0 0 1 1.5 1.5z"/>
+                <path fill="#EA4335" d="M2 5.457a1.5 1.5 0 0 1 1.5-1.5h.572L12 9.643V20H3.5A1.5 1.5 0 0 1 2 18.5z"/>
+                <path fill="#34A853" d="M22 5.457v13.043a1.5 1.5 0 0 1-1.5 1.5H12V9.643l7.928-5.686h.572a1.5 1.5 0 0 1 1.5 1.5z"/>
+                <path fill="#FBBC04" d="M6 20V8.821l6 4.5V20H6z"/>
+                <path fill="#C5221F" d="M6 8.821 12 4.5l6 4.321-6 4.5z" opacity=".2"/>
+              </svg>
+              <span>Gmail</span>
+            </a>
+            <a class="provider" href="https://www.icloud.com/mail" target="_blank" rel="noopener" aria-label="Open iCloud Mail">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path fill="#3693F3" d="M18.5 16h-13a4.5 4.5 0 0 1-.66-8.95 6.5 6.5 0 0 1 12.78 1.04A3.5 3.5 0 0 1 18.5 16z"/>
+              </svg>
+              <span>iCloud</span>
+            </a>
+            <a class="provider" href="https://outlook.live.com/mail/" target="_blank" rel="noopener" aria-label="Open Outlook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path fill="#0078D4" d="M21 6H11v12h10a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1z"/>
+                <path fill="#0078D4" d="M11 8.5h10v1H11zm0 2.5h10v1H11zm0 2.5h10v1H11z" opacity=".4"/>
+                <path fill="#0078D4" d="M2 5.5 11 4v16l-9-1.5z"/>
+                <ellipse cx="6.5" cy="12" rx="2.4" ry="3.2" fill="#fff"/>
+              </svg>
+              <span>Outlook</span>
+            </a>
+            <a class="provider" href="https://mail.yahoo.com" target="_blank" rel="noopener" aria-label="Open Yahoo Mail">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path fill="#6001D2" d="M3 6h4l3 5 3-5h4l-6 9v4h-2v-4z"/>
+                <circle cx="19" cy="15" r="1.3" fill="#6001D2"/>
+                <path fill="#6001D2" d="M17.5 6h3l-1 6h-1z"/>
+              </svg>
+              <span>Yahoo</span>
+            </a>
+          </div>
+          <a href="mailto:">Other email <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Lock the time in</h3>
+          <p>Add the call to your calendar so a meeting can't sneak in over the top. We'll send reminders too.</p>
+          <div class="calendar-providers">
+            <a class="provider" id="calGoogle" href="https://calendar.google.com/calendar" target="_blank" rel="noopener" aria-label="Add to Google Calendar">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" fill="#fff" stroke="#DADCE0" stroke-width="0.5"/>
+                <path fill="#4285F4" d="M3 6a2 2 0 0 1 2-2h2v4H3z"/>
+                <path fill="#EA4335" d="M21 6a2 2 0 0 0-2-2h-2v4h4z"/>
+                <path fill="#34A853" d="M3 20a2 2 0 0 0 2 2h2v-4H3z"/>
+                <path fill="#FBBC04" d="M21 20a2 2 0 0 1-2 2h-2v-4h4z"/>
+                <text x="12" y="16" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#1A73E8" text-anchor="middle">31</text>
+              </svg>
+              <span>Google</span>
+            </a>
+            <a class="provider" id="calApple" href="#" download="bba-hormone-fix.ics" aria-label="Add to Apple Calendar">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="3" fill="#fff"/>
+                <rect x="3" y="4" width="18" height="5" rx="3" fill="#FF3B30"/>
+                <text x="12" y="18" font-family="-apple-system,Helvetica,sans-serif" font-size="9" font-weight="800" fill="#FF3B30" text-anchor="middle">31</text>
+              </svg>
+              <span>Apple</span>
+            </a>
+            <a class="provider" id="calOutlook" href="https://outlook.live.com/calendar/0/deeplink/compose" target="_blank" rel="noopener" aria-label="Add to Outlook Calendar">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" fill="#0078D4"/>
+                <rect x="6" y="7" width="12" height="12" rx="1" fill="#fff"/>
+                <text x="12" y="16" font-family="Segoe UI,Arial,sans-serif" font-size="8" font-weight="700" fill="#0078D4" text-anchor="middle">31</text>
+              </svg>
+              <span>Outlook</span>
+            </a>
+            <a class="provider" id="calYahoo" href="https://calendar.yahoo.com" target="_blank" rel="noopener" aria-label="Add to Yahoo Calendar">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" fill="#6001D2"/>
+                <rect x="6" y="7" width="12" height="12" rx="1" fill="#fff"/>
+                <text x="12" y="16" font-family="Helvetica,sans-serif" font-size="8" font-weight="700" fill="#6001D2" text-anchor="middle">31</text>
+              </svg>
+              <span>Yahoo</span>
+            </a>
+          </div>
+          <a href="#" id="addToCalLink">Download .ics <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>DM us "HORMONE LIVE 26"</h3>
+          <p>Message us with the keyword <strong style="color:#fff">HORMONE LIVE 26</strong> and we'll send you a bonus the morning of the call.</p>
+          <div class="social-providers">
+            <a class="provider" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="DM on Instagram">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="igGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#F58529"/>
+                    <stop offset="50%" stop-color="#DD2A7B"/>
+                    <stop offset="100%" stop-color="#8134AF"/>
+                  </linearGradient>
+                </defs>
+                <rect x="3" y="3" width="18" height="18" rx="5" fill="url(#igGrad)"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="1.6"/>
+                <circle cx="17.5" cy="6.5" r="1.1" fill="#fff"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+            <a class="provider" href="https://facebook.com/" target="_blank" rel="noopener" aria-label="DM on Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" fill="#1877F2"/>
+                <path fill="#fff" d="M13.5 21.5v-7H16l.5-3h-3V9.5c0-.9.3-1.5 1.6-1.5H17V5.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4 1.5-4 4.2V11.5H8v3h2.5v7z"/>
+              </svg>
+              <span>Facebook</span>
+            </a>
+            <a class="provider" href="https://m.me/" target="_blank" rel="noopener" aria-label="DM on Messenger">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="msgGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+                    <stop offset="0%" stop-color="#00B2FF"/>
+                    <stop offset="100%" stop-color="#006AFF"/>
+                  </linearGradient>
+                </defs>
+                <path fill="url(#msgGrad)" d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.5 3.7 7.2v3.6l3.4-1.9c.9.3 1.9.4 2.9.4 5.5 0 10-4.1 10-9.3S17.5 2 12 2z"/>
+                <path fill="#fff" d="m6.7 14.3 3-4.7 2.4 2.4 4.5-2.8-3 4.7-2.4-2.4z"/>
+              </svg>
+              <span>Messenger</span>
+            </a>
+            <a class="provider" href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="DM on TikTok">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path fill="#25F4EE" d="M16.5 2.5h-3v13.2c0 1.7-1.4 3.1-3.1 3.1s-3.1-1.4-3.1-3.1 1.4-3.1 3.1-3.1c.3 0 .6 0 .9.1V9.5c-.3 0-.6-.1-.9-.1C7 9.4 4 12.4 4 16s3 6.6 6.6 6.6 6.6-3 6.6-6.6V8.7c1.2.9 2.7 1.4 4.3 1.4V7c-2.5 0-4.5-2-4.5-4.5z" transform="translate(-0.5,-0.5)"/>
+                <path fill="#FE2C55" d="M17.5 3.5h-3v13.2c0 1.7-1.4 3.1-3.1 3.1s-3.1-1.4-3.1-3.1 1.4-3.1 3.1-3.1c.3 0 .6 0 .9.1V10.5c-.3 0-.6-.1-.9-.1C8 10.4 5 13.4 5 17s3 6.6 6.6 6.6 6.6-3 6.6-6.6V9.7c1.2.9 2.7 1.4 4.3 1.4V8c-2.5 0-4.5-2-4.5-4.5z" transform="translate(-0.5,-0.5)"/>
+                <path fill="#fff" d="M17 3h-3v13.2c0 1.7-1.4 3.1-3.1 3.1s-3.1-1.4-3.1-3.1 1.4-3.1 3.1-3.1c.3 0 .6 0 .9.1V10c-.3 0-.6-.1-.9-.1C7.5 9.9 4.5 13 4.5 16.5S7.5 23.1 11 23.1s6.5-3 6.5-6.6V9.2c1.2.9 2.7 1.4 4.3 1.4V7.5c-2.5 0-4.5-2-4.5-4.5z"/>
+              </svg>
+              <span>TikTok</span>
+            </a>
+          </div>
+          <a href="https://instagram.com/" target="_blank" rel="noopener">Open Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="while-section">
+    <div class="while-inner">
+      <h2>While you <span class="serif">wait.</span></h2>
+      <p>Want a preview of how we think about hormones, strength, and recovery for women 35+? Spend 10 minutes inside our latest pieces.</p>
+      <div class="while-buttons">
+        <a href="https://instagram.com/" class="btn-ghost" target="_blank" rel="noopener">Follow on Instagram</a>
+        <a href="https://facebook.com/" class="btn-ghost" target="_blank" rel="noopener">Join us on Facebook</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p><a href="../save-your-seat/">&larr; Back to registration</a></p>
+    <div class="copyright">&copy; Better Body Academy &middot; All rights reserved</div>
+  </div>
+</footer>
+
+<script>
+  // Mirror of registration page's optional date config. Set when scheduled.
+  var WEBINAR_DATE = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
+
+  (function(){
+    // Pull first name out of URL ?firstName=...
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var fn = (params.get('firstName') || '').trim();
+      if (fn) document.getElementById('firstNameSlot').textContent = fn;
+    } catch(e){}
+
+    var cdTitle = document.getElementById('countdownTitle');
+    var cdSub = document.getElementById('countdownSub');
+    var cdTba = document.getElementById('countdownTba');
+    var cdTimer = document.getElementById('countdownTimer');
+    var cdDays = document.getElementById('cdDays');
+    var cdHours = document.getElementById('cdHours');
+    var cdMins = document.getElementById('cdMins');
+    var cdSecs = document.getElementById('cdSecs');
+
+    function pad(n){ return n < 10 ? '0' + n : '' + n; }
+    function fmtDate(d){
+      try {
+        return d.toLocaleDateString(undefined, { weekday:'long', month:'long', day:'numeric' }) +
+               ' at ' + d.toLocaleTimeString(undefined, { hour:'numeric', minute:'2-digit' });
+      } catch(e){ return d.toString(); }
+    }
+
+    function pad2(n){ return n < 10 ? '0' + n : '' + n; }
+    function toCalStamp(d){
+      return d.getUTCFullYear() +
+        pad2(d.getUTCMonth()+1) +
+        pad2(d.getUTCDate()) + 'T' +
+        pad2(d.getUTCHours()) +
+        pad2(d.getUTCMinutes()) +
+        pad2(d.getUTCSeconds()) + 'Z';
+    }
+    function toLocalStamp(d){
+      return d.getFullYear() + '-' +
+        pad2(d.getMonth()+1) + '-' +
+        pad2(d.getDate()) + 'T' +
+        pad2(d.getHours()) + ':' +
+        pad2(d.getMinutes()) + ':' +
+        pad2(d.getSeconds());
+    }
+    function buildIcs(opts){
+      var lines = [
+        'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//BBA//Hormone Fix//EN',
+        'BEGIN:VEVENT',
+        'UID:' + Date.now() + '@betterbodyacademy.com',
+        'DTSTAMP:' + toCalStamp(new Date()),
+        'DTSTART:' + toCalStamp(opts.start),
+        'DTEND:' + toCalStamp(opts.end),
+        'SUMMARY:' + opts.title,
+        'DESCRIPTION:' + opts.details,
+        'END:VEVENT','END:VCALENDAR'
+      ];
+      return 'data:text/calendar;charset=utf-8,' + encodeURIComponent(lines.join('\r\n'));
+    }
+
+    if (WEBINAR_DATE) {
+      var target = new Date(WEBINAR_DATE);
+      if (!isNaN(target.getTime())) {
+        var formatted = fmtDate(target);
+        if (cdTitle) cdTitle.textContent = formatted;
+        if (cdSub) cdSub.textContent = "Mark your calendar. Doors close when the live begins.";
+        if (cdTba) cdTba.style.display = 'none';
+        if (cdTimer) cdTimer.style.display = 'flex';
+
+        var evtTitle = 'The Hormone Fix — Better Body Academy';
+        var evtDetails = 'Live training. Your room link is in your confirmation email.';
+        var endDate = new Date(target.getTime() + 60 * 60 * 1000);
+        var startUtc = toCalStamp(target);
+        var endUtc = toCalStamp(endDate);
+
+        var gCal = document.getElementById('calGoogle');
+        if (gCal) gCal.href = 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+          '&text=' + encodeURIComponent(evtTitle) +
+          '&dates=' + startUtc + '/' + endUtc +
+          '&details=' + encodeURIComponent(evtDetails);
+
+        var oCal = document.getElementById('calOutlook');
+        if (oCal) oCal.href = 'https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent' +
+          '&subject=' + encodeURIComponent(evtTitle) +
+          '&startdt=' + encodeURIComponent(toLocalStamp(target)) +
+          '&enddt=' + encodeURIComponent(toLocalStamp(endDate)) +
+          '&body=' + encodeURIComponent(evtDetails);
+
+        var yCal = document.getElementById('calYahoo');
+        if (yCal) yCal.href = 'https://calendar.yahoo.com/?v=60' +
+          '&title=' + encodeURIComponent(evtTitle) +
+          '&st=' + startUtc +
+          '&et=' + endUtc +
+          '&desc=' + encodeURIComponent(evtDetails);
+
+        var icsHref = buildIcs({ start: target, end: endDate, title: evtTitle, details: evtDetails });
+        var aCal = document.getElementById('calApple');
+        if (aCal) aCal.href = icsHref;
+        var icsLink = document.getElementById('addToCalLink');
+        if (icsLink) icsLink.href = icsHref;
+
+        function tick(){
+          var diff = target.getTime() - Date.now();
+          if (diff <= 0) {
+            if (cdTitle) cdTitle.textContent = 'Training is live now';
+            if (cdSub) cdSub.textContent = "Use the link in your email to join.";
+            cdDays.textContent = '00'; cdHours.textContent = '00';
+            cdMins.textContent = '00'; cdSecs.textContent = '00';
+            return;
+          }
+          var s = Math.floor(diff / 1000);
+          var d = Math.floor(s / 86400); s -= d * 86400;
+          var h = Math.floor(s / 3600);  s -= h * 3600;
+          var m = Math.floor(s / 60);    s -= m * 60;
+          cdDays.textContent = pad(d);
+          cdHours.textContent = pad(h);
+          cdMins.textContent = pad(m);
+          cdSecs.textContent = pad(s);
+        }
+        tick();
+        setInterval(tick, 1000);
+      }
+    }
+  })();
+</script>
+
+</body>
+</html>
