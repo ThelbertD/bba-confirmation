@@ -30,13 +30,7 @@
     background:var(--bg);color:var(--ink);line-height:1.6;
     -webkit-font-smoothing:antialiased;overflow-x:hidden;
   }
-  body::before{
-    content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
-    background:
-      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(245,143,168,0.34), transparent 55%),
-      radial-gradient(ellipse 40% 50% at 100% 60%, rgba(255,182,206,0.18), transparent 60%),
-      radial-gradient(ellipse 40% 35% at 0% 70%, rgba(245,143,168,0.1), transparent 60%);
-  }
+  body::before{display:none}
 
   nav.top{
     position:relative;z-index:2;max-width:1280px;margin:0 auto;
@@ -321,7 +315,7 @@
 
 <nav class="top">
   <div class="logo">
-    <img src="img/bba-logo-horizontal.png" alt="Better Body Academy">
+    <img src="img/bba-logo-new.png" alt="Better Body Academy">
   </div>
   <span class="badge">Registered</span>
 </nav>
@@ -365,7 +359,6 @@
   <section class="steps-section">
     <div class="steps-inner">
       <div class="steps-eyebrow">Three quick things</div>
-      <h2 class="steps-title">Do these before the call <span class="serif">starts.</span></h2>
       <div class="steps-grid">
         <div class="step-card">
           <div class="step-num">01</div>
