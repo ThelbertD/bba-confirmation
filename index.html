@@ -330,13 +330,47 @@
   footer a{color:var(--muted);text-decoration:none}
   footer a:hover{color:var(--pink)}
 
+  @media (max-width:768px){
+    nav.top{padding:16px 20px}
+    .logo img{height:56px}
+    .hero{padding:28px 20px 32px}
+    h1{font-size:clamp(28px,8vw,44px)}
+    .hero-sub{font-size:16px}
+    .countdown-wrap{padding:0 20px}
+    .countdown{padding:20px;gap:20px}
+    .countdown-title{font-size:18px}
+    .countdown-cell{min-width:60px;padding:10px 6px}
+    .countdown-num{font-size:24px}
+    .video-section{padding:8px 20px 48px}
+    .steps-section{padding:48px 20px}
+    .steps-grid{grid-template-columns:repeat(2,1fr)}
+    .while-section{padding:48px 20px}
+    .while-inner{padding:32px 24px}
+  }
+
   @media (max-width:600px){
     .hero{padding:24px 20px 30px}
-    .hero h1{font-size:36px}
+    .hero h1{font-size:clamp(26px,8vw,36px)}
     .hero-badge{width:96px;height:96px}
-    .video-section, .steps-section, .while-section{padding:48px 20px}
-    .while-inner{padding:32px 24px}
-    nav.top{padding:16px 20px}
+    .video-section, .steps-section, .while-section{padding:40px 16px}
+    .while-inner{padding:28px 20px}
+    nav.top{padding:14px 16px}
+    .steps-grid{grid-template-columns:1fr}
+    .countdown-cell{min-width:56px}
+    .countdown-num{font-size:22px}
+    .email-providers, .calendar-providers, .social-providers{grid-template-columns:1fr 1fr}
+    footer{padding:36px 20px 48px}
+  }
+
+  @media (max-width:400px){
+    .hero h1{font-size:24px}
+    .countdown-timer{gap:8px}
+    .countdown-cell{min-width:50px;padding:8px 4px}
+    .countdown-num{font-size:20px}
+    .countdown-unit{font-size:9px}
+    .email-providers, .calendar-providers, .social-providers{grid-template-columns:1fr}
+    .while-buttons{flex-direction:column;align-items:stretch}
+    .btn-ghost{justify-content:center}
   }
 </style>
 </head>
