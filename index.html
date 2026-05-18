@@ -124,7 +124,7 @@
   }
 
   /* Video block */
-  .video-section{padding:64px 32px;position:relative}
+  .video-section{padding:8px 32px 64px;position:relative}
   .video-inner{max-width:980px;margin:0 auto}
   .video-eyebrow{
     text-align:center;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
@@ -155,8 +155,8 @@
   .video-placeholder .play-label{font-size:14px;color:var(--muted);font-weight:500;letter-spacing:0.04em}
 
   /* Next steps */
-  .steps-section{padding:64px 32px}
-  .steps-inner{max-width:980px;margin:0 auto}
+  .steps-section{padding:64px 48px}
+  .steps-inner{max-width:1280px;margin:0 auto}
   .steps-eyebrow{
     display:inline-flex;align-items:center;gap:8px;
     font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
@@ -168,11 +168,13 @@
     letter-spacing:-0.025em;margin:0 0 36px;line-height:1.15;
   }
   .steps-title .serif{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--pink)}
-  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
   .step-card{
     background:rgba(255,255,255,0.04);border:1px solid var(--line);border-radius:20px;
     padding:28px 26px;position:relative;
+    display:flex;flex-direction:column;
   }
+  .step-card p{flex:1}
   .step-num{
     display:inline-flex;width:44px;height:44px;border-radius:12px;
     background:linear-gradient(135deg, rgba(243,35,161,0.2), rgba(255,95,196,0.2));
@@ -190,7 +192,8 @@
   .step-card a:hover{color:var(--pink-glow)}
   .step-card a svg{width:14px;height:14px;transition:transform 0.2s}
   .step-card a:hover svg{transform:translateX(3px)}
-  @media (max-width:900px){.steps-grid{grid-template-columns:1fr}}
+  @media (max-width:1100px){.steps-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:600px){.steps-grid{grid-template-columns:1fr}}
 
   .email-providers{
     display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0 0 14px;
@@ -356,21 +359,6 @@
     <p class="hero-sub">Your seat for <strong>The Hormone Fix</strong> is locked in. A confirmation email is on its way with your room link. Here's everything you need to know before the call.</p>
   </section>
 
-  <div class="countdown-wrap">
-    <div class="countdown" id="countdownBlock">
-      <div class="countdown-label">
-        <span class="countdown-eyebrow">&#8987; Training starts in</span>
-        <span class="countdown-title" id="countdownTitle">Date to be announced</span>
-        <span class="countdown-sub" id="countdownSub">We'll lock the date soon and email you the moment it's confirmed.</span>
-      </div>
-
-      <div class="countdown-tba" id="countdownTba">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-        <span>Date: <strong style="color:#fff;font-weight:700">To Be Announced</strong></span>
-      </div>
-    </div>
-  </div>
-
   <section class="video-section">
     <div class="video-inner">
       <div class="video-wrap">
@@ -400,22 +388,28 @@
 
   <section class="steps-section">
     <div class="steps-inner">
-      <div class="steps-eyebrow">Three quick things</div>
+      <div class="steps-eyebrow">Four quick things</div>
       <h2 class="steps-title">Do these before the call <span class="serif">starts.</span></h2>
       <div class="steps-grid">
         <div class="step-card">
-          <div class="step-num">01</div>
-          <h3>Check your inbox</h3>
-          <p>The confirmation email has your room link. If you don't see it in 5 minutes, check spam or promotions.</p>
+          <div class="step-num">1</div>
+          <h3>Step 1: Watch The Full Video Above</h3>
+          <div style="position:relative;width:100%;aspect-ratio:16/9;background:#0A0A0A;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:12px;">
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(243,35,161,0.1),rgba(255,95,196,0.04));">
+              <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--pink-glow));display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px -6px rgba(243,35,161,0.6);">
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;color:#000;margin-left:3px"><path d="M8 5v14l11-7L8 5z"/></svg>
+              </div>
+            </div>
+          </div>
+          <p>Watch the welcome video above in full. It covers everything you need to know before the live training starts.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Step 2: Check Your Email</h3>
+          <p>We sent over a zoom link for you can join from your laptop. If you don't see it in 5 minutes, check spam or promotions.</p>
           <div class="email-providers">
             <a class="provider" href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener" aria-label="Open Gmail">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path fill="#4285F4" d="M22 5.457v13.043a1.5 1.5 0 0 1-1.5 1.5H18V8.821l-6 4.5-6-4.5V20H3.5A1.5 1.5 0 0 1 2 18.5V5.457A1.5 1.5 0 0 1 3.5 3.957h.572L12 9.643l7.928-5.686h.572a1.5 1.5 0 0 1 1.5 1.5z"/>
-                <path fill="#EA4335" d="M2 5.457a1.5 1.5 0 0 1 1.5-1.5h.572L12 9.643V20H3.5A1.5 1.5 0 0 1 2 18.5z"/>
-                <path fill="#34A853" d="M22 5.457v13.043a1.5 1.5 0 0 1-1.5 1.5H12V9.643l7.928-5.686h.572a1.5 1.5 0 0 1 1.5 1.5z"/>
-                <path fill="#FBBC04" d="M6 20V8.821l6 4.5V20H6z"/>
-                <path fill="#C5221F" d="M6 8.821 12 4.5l6 4.321-6 4.5z" opacity=".2"/>
-              </svg>
+              <img src="img/bba-badge.png" style="width:18px;height:18px;object-fit:contain;flex-shrink:0" aria-hidden="true">
               <span>Gmail</span>
             </a>
             <a class="provider" href="https://www.icloud.com/mail" target="_blank" rel="noopener" aria-label="Open iCloud Mail">
@@ -445,8 +439,8 @@
           <a href="mailto:">Other email <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
         </div>
         <div class="step-card">
-          <div class="step-num">02</div>
-          <h3>Lock the time in</h3>
+          <div class="step-num">3</div>
+          <h3>Step 3: Add the Event To Your Calendar So You Remember</h3>
           <p>Add the call to your calendar so a meeting can't sneak in over the top. We'll send reminders too.</p>
           <div class="calendar-providers">
             <a class="provider" id="calGoogle" href="https://calendar.google.com/calendar" target="_blank" rel="noopener" aria-label="Add to Google Calendar">
@@ -488,23 +482,12 @@
           <a href="#" id="addToCalLink">Download .ics <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
         </div>
         <div class="step-card">
-          <div class="step-num">03</div>
-          <h3>DM us "HORMONE LIVE 26"</h3>
-          <p>Message us with the keyword <strong style="color:#fff">HORMONE LIVE 26</strong> and we'll send you a bonus the morning of the call.</p>
+          <div class="step-num">4</div>
+          <h3>Step 4: DM Me on Instagram or Facebook</h3>
+          <p>Send me the word <strong style="color:#fff">"Live26"</strong> on Instagram or Facebook and let me know you signed up for the Live Training.</p>
           <div class="social-providers">
             <a class="provider" href="https://www.instagram.com/carlystuart_betterbodyacademy/" target="_blank" rel="noopener" aria-label="DM Carly on Instagram">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <defs>
-                  <linearGradient id="igGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#F58529"/>
-                    <stop offset="50%" stop-color="#DD2A7B"/>
-                    <stop offset="100%" stop-color="#8134AF"/>
-                  </linearGradient>
-                </defs>
-                <rect x="3" y="3" width="18" height="18" rx="5" fill="url(#igGrad)"/>
-                <circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="1.6"/>
-                <circle cx="17.5" cy="6.5" r="1.1" fill="#fff"/>
-              </svg>
+              <img src="img/bba-badge.png" style="width:18px;height:18px;object-fit:contain;flex-shrink:0" aria-hidden="true">
               <span>Instagram</span>
             </a>
             <a class="provider" href="https://www.facebook.com/carly.stuart.7/" target="_blank" rel="noopener" aria-label="DM Carly on Facebook">
