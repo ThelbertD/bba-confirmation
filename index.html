@@ -77,14 +77,14 @@
 
     nav.top .badge {
       font-size: 11px;
-      color: var(--pink);
+      color: #fff;
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       padding: 6px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(243, 35, 161, 0.3);
-      background: rgba(243, 35, 161, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.08);
     }
 
     main {
@@ -277,10 +277,7 @@
       letter-spacing: -0.02em;
       line-height: 1;
       font-variant-numeric: tabular-nums;
-      background: linear-gradient(135deg, var(--pink), var(--pink-glow));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      color: #fff;
     }
 
     .countdown-unit {
@@ -1066,9 +1063,6 @@
   <main>
 
     <section class="hero">
-      <div class="hero-badge">
-        <img src="img/bba-badge.png" alt="BBA Transformation Team">
-      </div>
       <h1>You're in, <span class="hero-name" id="firstNameSlot">friend</span>. <span class="serif">Save this
           page.</span></h1>
       <p class="hero-sub">Your seat for <strong>The Hormone Fix</strong> is locked in. A confirmation email with your room link is on its way. Here's everything you need to know before the call.</p>
@@ -1147,8 +1141,13 @@
             <div class="email-providers">
               <a class="provider" href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener"
                 aria-label="Open Gmail">
-                <img src="img/bba-badge.png" style="width:18px;height:18px;object-fit:contain;flex-shrink:0"
-                  aria-hidden="true">
+                <svg viewBox="52 42 88 66" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path fill="#4285F4" d="M58 108h14V78L52 59v43c0 3.32 2.69 6 6 6"/>
+                  <path fill="#34A853" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 19"/>
+                  <path fill="#FBBC04" d="M120 48v30l20-19v-8c0-7.42-8.47-11.65-14.4-7.2"/>
+                  <path fill="#EA4335" d="M72 78V48l24 18 24-18v30L96 96"/>
+                  <path fill="#C5221F" d="M52 51v8l20 19V48l-5.6-4.2c-5.94-4.46-14.4-.22-14.4 7.2"/>
+                </svg>
                 <span>Gmail</span>
               </a>
               <a class="provider" href="https://www.icloud.com/mail" target="_blank" rel="noopener"
@@ -1248,8 +1247,20 @@
             <div class="social-providers">
               <a class="provider" href="https://www.instagram.com/carlystuart_betterbodyacademy/" target="_blank"
                 rel="noopener" aria-label="DM Carly on Instagram">
-                <img src="img/bba-badge.png" style="width:18px;height:18px;object-fit:contain;flex-shrink:0"
-                  aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="igGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#FFDC80"/>
+                      <stop offset="25%" stop-color="#F77737"/>
+                      <stop offset="50%" stop-color="#E1306C"/>
+                      <stop offset="75%" stop-color="#C13584"/>
+                      <stop offset="100%" stop-color="#833AB4"/>
+                    </linearGradient>
+                  </defs>
+                  <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igGrad)"/>
+                  <circle cx="12" cy="12" r="5" fill="none" stroke="#fff" stroke-width="2"/>
+                  <circle cx="17.5" cy="6.5" r="1.5" fill="#fff"/>
+                </svg>
                 <span>Instagram</span>
               </a>
               <a class="provider" href="https://www.facebook.com/carly.stuart.7/" target="_blank" rel="noopener"
